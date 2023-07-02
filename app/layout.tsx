@@ -1,5 +1,6 @@
-import './globals.css'
+import '@/app/globals.css'
 import React from "react";
+import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div>navigation bar</div>
+        <div>
+          <div>
+            <Link href="/">home</Link>
+          </div>
+          <div>
+            <Link href={"/jake"}>jake</Link>
+          </div>
+          <div>
+            <Link href={"/counter"}>counter</Link>
+          </div>
+        </div>
         {children}
       </body>
     </html>
